@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E7F0AED194DB2C700B1F1A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0AEC194DB2C700B1F1A2 /* Foundation.framework */; };
+		3E7F0AEF194DB2C700B1F1A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0AEE194DB2C700B1F1A2 /* CoreGraphics.framework */; };
+		3E7F0AF1194DB2C700B1F1A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0AF0194DB2C700B1F1A2 /* UIKit.framework */; };
+		3E7F0AF7194DB2C700B1F1A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F0AF5194DB2C700B1F1A2 /* InfoPlist.strings */; };
+		3E7F0AF9194DB2C700B1F1A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0AF8194DB2C700B1F1A2 /* main.m */; };
+		3E7F0AFD194DB2C700B1F1A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0AFC194DB2C700B1F1A2 /* AppDelegate.m */; };
+		3E7F0B00194DB2C700B1F1A2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F0AFE194DB2C700B1F1A2 /* Main_iPhone.storyboard */; };
+		3E7F0B03194DB2C700B1F1A2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F0B01194DB2C700B1F1A2 /* Main_iPad.storyboard */; };
+		3E7F0B06194DB2C700B1F1A2 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0B05194DB2C700B1F1A2 /* MasterViewController.m */; };
+		3E7F0B09194DB2C700B1F1A2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0B08194DB2C700B1F1A2 /* DetailViewController.m */; };
+		3E7F0B0B194DB2C700B1F1A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F0B0A194DB2C700B1F1A2 /* Images.xcassets */; };
+		3E7F0B12194DB2C700B1F1A2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0B11194DB2C700B1F1A2 /* XCTest.framework */; };
+		3E7F0B13194DB2C800B1F1A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0AEC194DB2C700B1F1A2 /* Foundation.framework */; };
+		3E7F0B14194DB2C800B1F1A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0AF0194DB2C700B1F1A2 /* UIKit.framework */; };
+		3E7F0B1C194DB2C800B1F1A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F0B1A194DB2C800B1F1A2 /* InfoPlist.strings */; };
+		3E7F0B1E194DB2C800B1F1A2 /* OpensubtitlesTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0B1D194DB2C800B1F1A2 /* OpensubtitlesTesterTests.m */; };
+		3E7F0B28194DB32C00B1F1A2 /* libOpensubtitleAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0B27194DB32C00B1F1A2 /* libOpensubtitleAPI.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E7F0B15194DB2C800B1F1A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E7F0AE1194DB2C700B1F1A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E7F0AE8194DB2C700B1F1A2;
+			remoteInfo = OpensubtitlesTester;
+		};
+		3E7F0B2F194DB3EC00B1F1A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E7F0B2A194DB3EC00B1F1A2 /* OpensubtitleAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E4398A8194DA7E400603C29;
+			remoteInfo = OpensubtitleAPI;
+		};
+		3E7F0B31194DB3EC00B1F1A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E7F0B2A194DB3EC00B1F1A2 /* OpensubtitleAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E4398B8194DA7E400603C29;
+			remoteInfo = OpensubtitleAPITests;
+		};
+		3E7F0B33194DB3F500B1F1A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E7F0B2A194DB3EC00B1F1A2 /* OpensubtitleAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E4398A7194DA7E400603C29;
+			remoteInfo = OpensubtitleAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E7F0AE9194DB2C700B1F1A2 /* OpensubtitlesTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpensubtitlesTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7F0AEC194DB2C700B1F1A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E7F0AEE194DB2C700B1F1A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E7F0AF0194DB2C700B1F1A2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3E7F0AF4194DB2C700B1F1A2 /* OpensubtitlesTester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpensubtitlesTester-Info.plist"; sourceTree = "<group>"; };
+		3E7F0AF6194DB2C700B1F1A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E7F0AF8194DB2C700B1F1A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E7F0AFA194DB2C700B1F1A2 /* OpensubtitlesTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpensubtitlesTester-Prefix.pch"; sourceTree = "<group>"; };
+		3E7F0AFB194DB2C700B1F1A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E7F0AFC194DB2C700B1F1A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3E7F0AFF194DB2C700B1F1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		3E7F0B02194DB2C700B1F1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		3E7F0B04194DB2C700B1F1A2 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		3E7F0B05194DB2C700B1F1A2 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		3E7F0B07194DB2C700B1F1A2 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3E7F0B08194DB2C700B1F1A2 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3E7F0B0A194DB2C700B1F1A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3E7F0B10194DB2C700B1F1A2 /* OpensubtitlesTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpensubtitlesTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7F0B11194DB2C700B1F1A2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3E7F0B19194DB2C800B1F1A2 /* OpensubtitlesTesterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpensubtitlesTesterTests-Info.plist"; sourceTree = "<group>"; };
+		3E7F0B1B194DB2C800B1F1A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E7F0B1D194DB2C800B1F1A2 /* OpensubtitlesTesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpensubtitlesTesterTests.m; sourceTree = "<group>"; };
+		3E7F0B27194DB32C00B1F1A2 /* libOpensubtitleAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpensubtitleAPI.a; path = "../build/Debug-iphoneos/libOpensubtitleAPI.a"; sourceTree = "<group>"; };
+		3E7F0B2A194DB3EC00B1F1A2 /* OpensubtitleAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpensubtitleAPI.xcodeproj; path = ../OpensubtitleAPI.xcodeproj; sourceTree = "<group>"; };
+		3E7F0B6C194E674400B1F1A2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3E7F0B6E194E676500B1F1A2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3E7F0B70194E677900B1F1A2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3E7F0B72194E678100B1F1A2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3E7F0B74194E679800B1F1A2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E7F0AE6194DB2C700B1F1A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F0B28194DB32C00B1F1A2 /* libOpensubtitleAPI.a in Frameworks */,
+				3E7F0AEF194DB2C700B1F1A2 /* CoreGraphics.framework in Frameworks */,
+				3E7F0AF1194DB2C700B1F1A2 /* UIKit.framework in Frameworks */,
+				3E7F0AED194DB2C700B1F1A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7F0B0D194DB2C700B1F1A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F0B12194DB2C700B1F1A2 /* XCTest.framework in Frameworks */,
+				3E7F0B14194DB2C800B1F1A2 /* UIKit.framework in Frameworks */,
+				3E7F0B13194DB2C800B1F1A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E7F0AE0194DB2C700B1F1A2 = {
+			isa = PBXGroup;
+			children = (
+				3E7F0B2A194DB3EC00B1F1A2 /* OpensubtitleAPI.xcodeproj */,
+				3E7F0AF2194DB2C700B1F1A2 /* OpensubtitlesTester */,
+				3E7F0B17194DB2C800B1F1A2 /* OpensubtitlesTesterTests */,
+				3E7F0AEB194DB2C700B1F1A2 /* Frameworks */,
+				3E7F0AEA194DB2C700B1F1A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E7F0AEA194DB2C700B1F1A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F0AE9194DB2C700B1F1A2 /* OpensubtitlesTester.app */,
+				3E7F0B10194DB2C700B1F1A2 /* OpensubtitlesTesterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E7F0AEB194DB2C700B1F1A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F0B74194E679800B1F1A2 /* SystemConfiguration.framework */,
+				3E7F0B72194E678100B1F1A2 /* MobileCoreServices.framework */,
+				3E7F0B70194E677900B1F1A2 /* Security.framework */,
+				3E7F0B6E194E676500B1F1A2 /* CFNetwork.framework */,
+				3E7F0B6C194E674400B1F1A2 /* CoreData.framework */,
+				3E7F0B27194DB32C00B1F1A2 /* libOpensubtitleAPI.a */,
+				3E7F0AEC194DB2C700B1F1A2 /* Foundation.framework */,
+				3E7F0AEE194DB2C700B1F1A2 /* CoreGraphics.framework */,
+				3E7F0AF0194DB2C700B1F1A2 /* UIKit.framework */,
+				3E7F0B11194DB2C700B1F1A2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E7F0AF2194DB2C700B1F1A2 /* OpensubtitlesTester */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F0AFB194DB2C700B1F1A2 /* AppDelegate.h */,
+				3E7F0AFC194DB2C700B1F1A2 /* AppDelegate.m */,
+				3E7F0AFE194DB2C700B1F1A2 /* Main_iPhone.storyboard */,
+				3E7F0B01194DB2C700B1F1A2 /* Main_iPad.storyboard */,
+				3E7F0B04194DB2C700B1F1A2 /* MasterViewController.h */,
+				3E7F0B05194DB2C700B1F1A2 /* MasterViewController.m */,
+				3E7F0B07194DB2C700B1F1A2 /* DetailViewController.h */,
+				3E7F0B08194DB2C700B1F1A2 /* DetailViewController.m */,
+				3E7F0B0A194DB2C700B1F1A2 /* Images.xcassets */,
+				3E7F0AF3194DB2C700B1F1A2 /* Supporting Files */,
+			);
+			path = OpensubtitlesTester;
+			sourceTree = "<group>";
+		};
+		3E7F0AF3194DB2C700B1F1A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F0AF4194DB2C700B1F1A2 /* OpensubtitlesTester-Info.plist */,
+				3E7F0AF5194DB2C700B1F1A2 /* InfoPlist.strings */,
+				3E7F0AF8194DB2C700B1F1A2 /* main.m */,
+				3E7F0AFA194DB2C700B1F1A2 /* OpensubtitlesTester-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E7F0B17194DB2C800B1F1A2 /* OpensubtitlesTesterTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F0B1D194DB2C800B1F1A2 /* OpensubtitlesTesterTests.m */,
+				3E7F0B18194DB2C800B1F1A2 /* Supporting Files */,
+			);
+			path = OpensubtitlesTesterTests;
+			sourceTree = "<group>";
+		};
+		3E7F0B18194DB2C800B1F1A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F0B19194DB2C800B1F1A2 /* OpensubtitlesTesterTests-Info.plist */,
+				3E7F0B1A194DB2C800B1F1A2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E7F0B2B194DB3EC00B1F1A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E7F0B30194DB3EC00B1F1A2 /* libOpensubtitleAPI.a */,
+				3E7F0B32194DB3EC00B1F1A2 /* OpensubtitleAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E7F0AE8194DB2C700B1F1A2 /* OpensubtitlesTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E7F0B21194DB2C800B1F1A2 /* Build configuration list for PBXNativeTarget "OpensubtitlesTester" */;
+			buildPhases = (
+				3E7F0AE5194DB2C700B1F1A2 /* Sources */,
+				3E7F0AE6194DB2C700B1F1A2 /* Frameworks */,
+				3E7F0AE7194DB2C700B1F1A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E7F0B34194DB3F500B1F1A2 /* PBXTargetDependency */,
+			);
+			name = OpensubtitlesTester;
+			productName = OpensubtitlesTester;
+			productReference = 3E7F0AE9194DB2C700B1F1A2 /* OpensubtitlesTester.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E7F0B0F194DB2C700B1F1A2 /* OpensubtitlesTesterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E7F0B24194DB2C800B1F1A2 /* Build configuration list for PBXNativeTarget "OpensubtitlesTesterTests" */;
+			buildPhases = (
+				3E7F0B0C194DB2C700B1F1A2 /* Sources */,
+				3E7F0B0D194DB2C700B1F1A2 /* Frameworks */,
+				3E7F0B0E194DB2C700B1F1A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E7F0B16194DB2C800B1F1A2 /* PBXTargetDependency */,
+			);
+			name = OpensubtitlesTesterTests;
+			productName = OpensubtitlesTesterTests;
+			productReference = 3E7F0B10194DB2C700B1F1A2 /* OpensubtitlesTesterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E7F0AE1194DB2C700B1F1A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Filipe Teixeira";
+				TargetAttributes = {
+					3E7F0B0F194DB2C700B1F1A2 = {
+						TestTargetID = 3E7F0AE8194DB2C700B1F1A2;
+					};
+				};
+			};
+			buildConfigurationList = 3E7F0AE4194DB2C700B1F1A2 /* Build configuration list for PBXProject "OpensubtitlesTester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E7F0AE0194DB2C700B1F1A2;
+			productRefGroup = 3E7F0AEA194DB2C700B1F1A2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3E7F0B2B194DB3EC00B1F1A2 /* Products */;
+					ProjectRef = 3E7F0B2A194DB3EC00B1F1A2 /* OpensubtitleAPI.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3E7F0AE8194DB2C700B1F1A2 /* OpensubtitlesTester */,
+				3E7F0B0F194DB2C700B1F1A2 /* OpensubtitlesTesterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E7F0B30194DB3EC00B1F1A2 /* libOpensubtitleAPI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOpensubtitleAPI.a;
+			remoteRef = 3E7F0B2F194DB3EC00B1F1A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E7F0B32194DB3EC00B1F1A2 /* OpensubtitleAPITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OpensubtitleAPITests.xctest;
+			remoteRef = 3E7F0B31194DB3EC00B1F1A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E7F0AE7194DB2C700B1F1A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F0B03194DB2C700B1F1A2 /* Main_iPad.storyboard in Resources */,
+				3E7F0B0B194DB2C700B1F1A2 /* Images.xcassets in Resources */,
+				3E7F0B00194DB2C700B1F1A2 /* Main_iPhone.storyboard in Resources */,
+				3E7F0AF7194DB2C700B1F1A2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7F0B0E194DB2C700B1F1A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F0B1C194DB2C800B1F1A2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E7F0AE5194DB2C700B1F1A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F0AFD194DB2C700B1F1A2 /* AppDelegate.m in Sources */,
+				3E7F0B06194DB2C700B1F1A2 /* MasterViewController.m in Sources */,
+				3E7F0AF9194DB2C700B1F1A2 /* main.m in Sources */,
+				3E7F0B09194DB2C700B1F1A2 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7F0B0C194DB2C700B1F1A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7F0B1E194DB2C800B1F1A2 /* OpensubtitlesTesterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E7F0B16194DB2C800B1F1A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E7F0AE8194DB2C700B1F1A2 /* OpensubtitlesTester */;
+			targetProxy = 3E7F0B15194DB2C800B1F1A2 /* PBXContainerItemProxy */;
+		};
+		3E7F0B34194DB3F500B1F1A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OpensubtitleAPI;
+			targetProxy = 3E7F0B33194DB3F500B1F1A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E7F0AF5194DB2C700B1F1A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E7F0AF6194DB2C700B1F1A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3E7F0AFE194DB2C700B1F1A2 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E7F0AFF194DB2C700B1F1A2 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3E7F0B01194DB2C700B1F1A2 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E7F0B02194DB2C700B1F1A2 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3E7F0B1A194DB2C800B1F1A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E7F0B1B194DB2C800B1F1A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E7F0B1F194DB2C800B1F1A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E7F0B20194DB2C800B1F1A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E7F0B22194DB2C800B1F1A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpensubtitlesTester/OpensubtitlesTester-Prefix.pch";
+				INFOPLIST_FILE = "OpensubtitlesTester/OpensubtitlesTester-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/teixeiras/Dropbox/PersonalProjects/objective-c/OpensubtitleAPI/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3E7F0B23194DB2C800B1F1A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpensubtitlesTester/OpensubtitlesTester-Prefix.pch";
+				INFOPLIST_FILE = "OpensubtitlesTester/OpensubtitlesTester-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/teixeiras/Dropbox/PersonalProjects/objective-c/OpensubtitleAPI/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3E7F0B25194DB2C800B1F1A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpensubtitlesTester.app/OpensubtitlesTester";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpensubtitlesTester/OpensubtitlesTester-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OpensubtitlesTesterTests/OpensubtitlesTesterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3E7F0B26194DB2C800B1F1A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpensubtitlesTester.app/OpensubtitlesTester";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpensubtitlesTester/OpensubtitlesTester-Prefix.pch";
+				INFOPLIST_FILE = "OpensubtitlesTesterTests/OpensubtitlesTesterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E7F0AE4194DB2C700B1F1A2 /* Build configuration list for PBXProject "OpensubtitlesTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7F0B1F194DB2C800B1F1A2 /* Debug */,
+				3E7F0B20194DB2C800B1F1A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E7F0B21194DB2C800B1F1A2 /* Build configuration list for PBXNativeTarget "OpensubtitlesTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7F0B22194DB2C800B1F1A2 /* Debug */,
+				3E7F0B23194DB2C800B1F1A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E7F0B24194DB2C800B1F1A2 /* Build configuration list for PBXNativeTarget "OpensubtitlesTesterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7F0B25194DB2C800B1F1A2 /* Debug */,
+				3E7F0B26194DB2C800B1F1A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E7F0AE1194DB2C700B1F1A2 /* Project object */;
+}
