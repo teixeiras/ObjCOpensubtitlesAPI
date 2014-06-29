@@ -9,7 +9,5 @@
 #import "OpensubtitleAPI.h"
 
 @implementation OpensubtitleAPI
--(void) test {
 
-}
 @end

@@ -12,7 +12,6 @@
 #import "SearchMoviesOnIMDBHandler.h"
 #import "SearchSubtitlesHandler.h"
 #import "GetSubLanguagesHandler.h"
-#import "Subtitle.h"
 
 @interface OSubManager()
 @property (nonatomic, strong) LoginRequest * loginRequest;
@@ -39,7 +38,6 @@
     self = [super init];
     if (self) {
         self.languages = [NSMutableArray new];
-        [self.languages addObject:@"por"];
     }
     return self;
 }
@@ -78,13 +76,22 @@
     // Not implemented
 }
 
--(void) countryLanguagesOnRetrieve:(void(^)(BOOL,NSArray *)) onLanguageRetrieve {
-    GetSubLanguagesHandler * handler = [GetSubLanguagesHandler new];
-    handler.onLanguageRetrieve = onLanguageRetrieve;
-    [handler makeRequest];
+-(void) retrieveCountryLanguagesLocalizedTo:(NSString *) language {
+    [self retrieveCountryLanguagesLocalizedTo:language onResult:^(BOOL success, NSArray * results) {
+        [self.delegate opensubitleAPI:self countryLanguagesResponseSuccess:success withResults:results];
+    }];
 }
 
--(void) addSearchLanguage:(NSDictionary *) language {
+-(void) retrieveCountryLanguagesLocalizedTo:(NSString *) language onResult:(void(^)(BOOL,NSArray *)) onLanguageRetrieve {
+    GetSubLanguagesHandler * subLanguageHandler = [GetSubLanguagesHandler new];
+    subLanguageHandler.language = language;
+    subLanguageHandler.onLanguageRetrieve = onLanguageRetrieve;
+    [subLanguageHandler makeRequest];
+    
+}
+
+
+-(void) addSearchLanguage:(NSString *) language {
     [self.languages addObject:language];
 }
 
@@ -96,22 +103,33 @@
     [self.languages removeAllObjects];
 }
 
--(void) searchSubtitlesForPathName:(NSString *) pathName onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound{
-    [self searchSubtitlesForPathName:pathName forLanguage:self.languages onQuery:onSubtitlesFound];
+-(void) searchSubtitlesForPathName:(NSString *) pathName {
+    
 }
 
--(void) searchSubtitlesForPathName:(NSString *) pathName forLanguage:(NSArray *) languages onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound{
-    NSString* fileName = [[pathName lastPathComponent] stringByDeletingPathExtension];
-    [self searchSubtitlesForString:fileName forLanguage:languages onQuery:onSubtitlesFound];
+-(void) searchSubtitlesForPathName:(NSString *) pathName forLanguage:(NSDictionary *) language {
+    
+}
+
+-(void) searchSubtitlesForString:(NSString *)string forLanguages:(NSArray *) languages{
+    [self searchSubtitlesForString:string forLanguages:languages onQuery:^(BOOL hasResult, NSArray * results) {
+        [self.delegate opensubitleAPI:self subtitleSearchResponseSuccess:hasResult withResults:results];
+    }];
+}
+
+-(void) searchSubtitlesForString:(NSString *)string {
+    [self searchSubtitlesForString:string onQuery:^(BOOL hasResult, NSArray * results) {
+        [self.delegate opensubitleAPI:self subtitleSearchResponseSuccess:hasResult withResults:results];
+    }];
 }
 
 -(void) searchSubtitlesForString:(NSString *) string onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound {
-    [self searchSubtitlesForString:string forLanguage:self.languages onQuery:onSubtitlesFound];
+    
+    [self searchSubtitlesForString:string forLanguages:self.languages onQuery:onSubtitlesFound];
 
 }
 
--(void) searchSubtitlesForString:(NSString *) string forLanguage:(NSArray *) languages onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound{
-    
+-(void) searchSubtitlesForString:(NSString *) string forLanguages:(NSArray *) languages onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound {
     SearchMoviesOnIMDBHandler * imdbSearch = [SearchMoviesOnIMDBHandler new];
     
     imdbSearch.query = string;
@@ -119,16 +137,21 @@
         if (hasResults) {
             
             NSMutableArray * imdbIDs = [NSMutableArray new];
-            for (NSDictionary * imdbid in results) {
-                [imdbIDs addObject:imdbid[@"id"]];
-            }
             SearchSubtitlesHandler * subtitlesHandler = [SearchSubtitlesHandler new];
             subtitlesHandler.token = self.token;
             subtitlesHandler.sublanguageid = [languages componentsJoinedByString:@","];
-            subtitlesHandler.imdbid = imdbIDs;//[imdbIDs componentsJoinedByString:@","];
+            
+            [results enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL *stop) {
+                [imdbIDs addObject:obj[@"id"]];
+                subtitlesHandler.imdbid = obj[@"id"];//[imdbIDs componentsJoinedByString:@","];
+                subtitlesHandler.onSubtitlesFound = onSubtitlesFound;
+                [subtitlesHandler makeRequest];
+            }];
+            
+            
+            subtitlesHandler.imdbid = imdbIDs[0];//[imdbIDs componentsJoinedByString:@","];
             subtitlesHandler.onSubtitlesFound = onSubtitlesFound;
             [subtitlesHandler makeRequest];
-            
         } else {
             (onSubtitlesFound)(NO, nil);
         }

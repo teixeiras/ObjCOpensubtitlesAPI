@@ -10,16 +10,6 @@
 #import "Subtitle.h"
 @implementation SearchSubtitlesHandler
 
-/**
- @property NSString * token;
- @property NSString * sublanguageid;
- 
- @property NSString * moviehash;
- @property NSString * moviebytesize;
- 
- @property NSString * imdbid;
- */
-
 -(NSArray *) parameters {
         NSMutableArray * entries = [NSMutableArray new];
     if (self.imdbid) {
@@ -77,19 +67,3 @@
     (self.onSubtitlesFound)(NO, nil);
 }
 @end
-/*
-
- struct(
- array(
- struct( subfile ), struct( subfile ), ...
- ) [data],
- (double) [seconds]
- )
- and contains these elements:
- 
- data
- array of found subtitle file matches, when no matches are found data is empty.
- subfile
- structure that holds the subtitle file information, see subtitle file structure?
- seconds
-*/
