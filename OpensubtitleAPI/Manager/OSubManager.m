@@ -146,13 +146,10 @@
             
             [results enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL *stop) {
                 [imdbIDs addObject:obj[@"id"]];
-                subtitlesHandler.imdbid = obj[@"id"];//[imdbIDs componentsJoinedByString:@","];
-                subtitlesHandler.onSubtitlesFound = onSubtitlesFound;
-                [subtitlesHandler makeRequest];
             }];
             
             
-            subtitlesHandler.imdbid = imdbIDs[0];//[imdbIDs componentsJoinedByString:@","];
+            subtitlesHandler.imdbid = imdbIDs;//[imdbIDs componentsJoinedByString:@","];
             subtitlesHandler.onSubtitlesFound = ^(BOOL hasResult, NSArray * results) {
                 (onSubtitlesFound)(hasResult, results);
                 [self.delegate opensubitleAPI:self subtitleSearchResponseSuccess:hasResult withResults:results];

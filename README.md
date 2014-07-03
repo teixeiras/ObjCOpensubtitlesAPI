@@ -29,7 +29,7 @@ If the download from subtitle went well
 	-(void) opensubitleAPI:(OSubManager *) sessionManager subtitleDownloadFailed:(int) error;
 When the subtitle fails to download
 ####Init the Manager
-OSubManager It's manager. You can do all using this class. 
+OSubManager It's the Proxy for all the features. You can do all operation using only this class. 
 
 Example using blocks:
 
