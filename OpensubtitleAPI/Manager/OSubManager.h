@@ -17,6 +17,9 @@
 -(void) opensubitleAPI:(OSubManager *) sessionManager subtitleSearchResponseSuccess:(BOOL) hasResults withResults:(NSArray *) result;
 -(void) opensubitleAPI:(OSubManager *) sessionManager countryLanguagesResponseSuccess:(BOOL) hasResults withResults:(NSArray *) result;
 
+-(void) opensubitleAPI:(OSubManager *) sessionManager subtitleDownloadWithData:(NSData *) results;
+-(void) opensubitleAPI:(OSubManager *) sessionManager subtitleDownloadFailed:(int) error;
+
 @end
 
 @interface OSubManager : NSObject
@@ -45,4 +48,8 @@
 -(void) searchSubtitlesForString:(NSString *)string;
 -(void) searchSubtitlesForString:(NSString *) string onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound;
 -(void) searchSubtitlesForString:(NSString *) string forLanguages:(NSArray *) languages onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound;
+
+-(void) downloadSubtitleWithId:(NSString *) identifier;
+-(void) downloadSubtitleWithId:(NSString *) identifier onDownloadFinish:(void(^)(NSData *)) onFinish onFail:(void(^)(int)) onFail;
+
 @end

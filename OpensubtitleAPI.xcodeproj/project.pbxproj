@@ -50,19 +50,12 @@
 		3E7F0C12194E69C900B1F1A2 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0BE8194E69C900B1F1A2 /* XMLRPCRequest.m */; };
 		3E7F0C13194E69C900B1F1A2 /* XMLRPCResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0BE9194E69C900B1F1A2 /* XMLRPCResponse.h */; };
 		3E7F0C14194E69C900B1F1A2 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0BEA194E69C900B1F1A2 /* XMLRPCResponse.m */; };
-		3E7F0C4A194F071C00B1F1A2 /* MTKObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0C35194F071C00B1F1A2 /* MTKObserver.h */; };
-		3E7F0C4B194F071C00B1F1A2 /* MTKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0C36194F071C00B1F1A2 /* MTKObserver.m */; };
-		3E7F0C4C194F071C00B1F1A2 /* MTKObserving.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0C37194F071C00B1F1A2 /* MTKObserving.h */; };
-		3E7F0C4D194F071C00B1F1A2 /* MTKObservingMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0C38194F071C00B1F1A2 /* MTKObservingMacros.h */; };
-		3E7F0C4E194F071C00B1F1A2 /* NSObject+MTKObserving.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0C39194F071C00B1F1A2 /* NSObject+MTKObserving.h */; };
-		3E7F0C4F194F071C00B1F1A2 /* NSObject+MTKObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0C3A194F071C00B1F1A2 /* NSObject+MTKObserving.m */; };
-		3E7F0C50194F071C00B1F1A2 /* keypath.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0C3C194F071C00B1F1A2 /* keypath.h */; };
-		3E7F0C51194F071C00B1F1A2 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0C3D194F071C00B1F1A2 /* metamacros.h */; };
-		3E7F0C52194F071C00B1F1A2 /* scope.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0C3E194F071C00B1F1A2 /* scope.h */; };
 		807E28C419608EF3001DF1C0 /* Subtitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C219608EF3001DF1C0 /* Subtitle.h */; };
 		807E28C519608EF3001DF1C0 /* Subtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 807E28C319608EF3001DF1C0 /* Subtitle.m */; };
 		807E28C81960909D001DF1C0 /* GetSubLanguagesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C61960909D001DF1C0 /* GetSubLanguagesHandler.h */; };
 		807E28C91960909D001DF1C0 /* GetSubLanguagesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 807E28C71960909D001DF1C0 /* GetSubLanguagesHandler.m */; };
+		80A666BB1965F91300E563E6 /* DownloadSubtitleHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A666B91965F91300E563E6 /* DownloadSubtitleHandler.h */; };
+		80A666BC1965F91300E563E6 /* DownloadSubtitleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A666BA1965F91300E563E6 /* DownloadSubtitleHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,19 +149,12 @@
 		3E7F0BE8194E69C900B1F1A2 /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
 		3E7F0BE9194E69C900B1F1A2 /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
 		3E7F0BEA194E69C900B1F1A2 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
-		3E7F0C35194F071C00B1F1A2 /* MTKObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTKObserver.h; sourceTree = "<group>"; };
-		3E7F0C36194F071C00B1F1A2 /* MTKObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTKObserver.m; sourceTree = "<group>"; };
-		3E7F0C37194F071C00B1F1A2 /* MTKObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTKObserving.h; sourceTree = "<group>"; };
-		3E7F0C38194F071C00B1F1A2 /* MTKObservingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTKObservingMacros.h; sourceTree = "<group>"; };
-		3E7F0C39194F071C00B1F1A2 /* NSObject+MTKObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MTKObserving.h"; sourceTree = "<group>"; };
-		3E7F0C3A194F071C00B1F1A2 /* NSObject+MTKObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MTKObserving.m"; sourceTree = "<group>"; };
-		3E7F0C3C194F071C00B1F1A2 /* keypath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keypath.h; sourceTree = "<group>"; };
-		3E7F0C3D194F071C00B1F1A2 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
-		3E7F0C3E194F071C00B1F1A2 /* scope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scope.h; sourceTree = "<group>"; };
 		807E28C219608EF3001DF1C0 /* Subtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subtitle.h; sourceTree = "<group>"; };
 		807E28C319608EF3001DF1C0 /* Subtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subtitle.m; sourceTree = "<group>"; };
 		807E28C61960909D001DF1C0 /* GetSubLanguagesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetSubLanguagesHandler.h; sourceTree = "<group>"; };
 		807E28C71960909D001DF1C0 /* GetSubLanguagesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetSubLanguagesHandler.m; sourceTree = "<group>"; };
+		80A666B91965F91300E563E6 /* DownloadSubtitleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadSubtitleHandler.h; sourceTree = "<group>"; };
+		80A666BA1965F91300E563E6 /* DownloadSubtitleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadSubtitleHandler.m; sourceTree = "<group>"; };
 		B53FBE7A1E6F4E57819E0CC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,7 +184,6 @@
 		3E43989F194DA7E400603C29 = {
 			isa = PBXGroup;
 			children = (
-				3E7F0C21194F071B00B1F1A2 /* Block-KVO-master */,
 				3E7F0B76194E69C800B1F1A2 /* xmlrpc-master */,
 				3E7F0B61194DF5FF00B1F1A2 /* OSHashAlgorithm.h */,
 				3E7F0B62194DF5FF00B1F1A2 /* OSHashAlgorithm.m */,
@@ -284,6 +269,8 @@
 				3E755148194F5EAE00A3AEAF /* SearchSubtitlesHandler.m */,
 				3E75514B194F604100A3AEAF /* SearchMoviesOnIMDBHandler.h */,
 				3E75514C194F604100A3AEAF /* SearchMoviesOnIMDBHandler.m */,
+				80A666B91965F91300E563E6 /* DownloadSubtitleHandler.h */,
+				80A666BA1965F91300E563E6 /* DownloadSubtitleHandler.m */,
 			);
 			name = Requests;
 			path = OpensubtitleAPI/Requests;
@@ -381,38 +368,6 @@
 			path = "Test Cases";
 			sourceTree = "<group>";
 		};
-		3E7F0C21194F071B00B1F1A2 /* Block-KVO-master */ = {
-			isa = PBXGroup;
-			children = (
-				3E7F0C34194F071C00B1F1A2 /* Sources */,
-			);
-			path = "Block-KVO-master";
-			sourceTree = "<group>";
-		};
-		3E7F0C34194F071C00B1F1A2 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				3E7F0C35194F071C00B1F1A2 /* MTKObserver.h */,
-				3E7F0C36194F071C00B1F1A2 /* MTKObserver.m */,
-				3E7F0C37194F071C00B1F1A2 /* MTKObserving.h */,
-				3E7F0C38194F071C00B1F1A2 /* MTKObservingMacros.h */,
-				3E7F0C39194F071C00B1F1A2 /* NSObject+MTKObserving.h */,
-				3E7F0C3A194F071C00B1F1A2 /* NSObject+MTKObserving.m */,
-				3E7F0C3B194F071C00B1F1A2 /* Utilities */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		3E7F0C3B194F071C00B1F1A2 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				3E7F0C3C194F071C00B1F1A2 /* keypath.h */,
-				3E7F0C3D194F071C00B1F1A2 /* metamacros.h */,
-				3E7F0C3E194F071C00B1F1A2 /* scope.h */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -421,17 +376,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				807E28C81960909D001DF1C0 /* GetSubLanguagesHandler.h in Headers */,
-				3E7F0C51194F071C00B1F1A2 /* metamacros.h in Headers */,
 				3E7F0BEB194E69C900B1F1A2 /* NSData+Base64.h in Headers */,
-				3E7F0C4D194F071C00B1F1A2 /* MTKObservingMacros.h in Headers */,
 				3E7F0B65194E651900B1F1A2 /* OSHashAlgorithm.h in Headers */,
 				3E7F0C03194E69C900B1F1A2 /* XMLRPC.h in Headers */,
-				3E7F0C4C194F071C00B1F1A2 /* MTKObserving.h in Headers */,
 				3E7F0B67194E651900B1F1A2 /* OSubManager.h in Headers */,
 				3E7F0C08194E69C900B1F1A2 /* XMLRPCConnectionManager.h in Headers */,
-				3E7F0C52194F071C00B1F1A2 /* scope.h in Headers */,
 				3E7F0C05194E69C900B1F1A2 /* XMLRPCConnection.h in Headers */,
-				3E7F0C50194F071C00B1F1A2 /* keypath.h in Headers */,
 				3E7F0C0D194E69C900B1F1A2 /* XMLRPCEventBasedParser.h in Headers */,
 				3E7F0B68194E653300B1F1A2 /* RequestHandler.h in Headers */,
 				3E755149194F5EAE00A3AEAF /* SearchSubtitlesHandler.h in Headers */,
@@ -441,9 +391,8 @@
 				3E7F0BED194E69C900B1F1A2 /* NSStringAdditions.h in Headers */,
 				3E7F0C0A194E69C900B1F1A2 /* XMLRPCDefaultEncoder.h in Headers */,
 				3E7F0B6A194E653300B1F1A2 /* RequestErrorHandler.h in Headers */,
+				80A666BB1965F91300E563E6 /* DownloadSubtitleHandler.h in Headers */,
 				3E7F0C11194E69C900B1F1A2 /* XMLRPCRequest.h in Headers */,
-				3E7F0C4A194F071C00B1F1A2 /* MTKObserver.h in Headers */,
-				3E7F0C4E194F071C00B1F1A2 /* NSObject+MTKObserving.h in Headers */,
 				3E7F0B6B194E653300B1F1A2 /* OpensubtitleAPI.h in Headers */,
 				3E7F0C07194E69C900B1F1A2 /* XMLRPCConnectionDelegate.h in Headers */,
 				3E75514D194F604100A3AEAF /* SearchMoviesOnIMDBHandler.h in Headers */,
@@ -540,8 +489,6 @@
 				3E7F0C09194E69C900B1F1A2 /* XMLRPCConnectionManager.m in Sources */,
 				3E7F0B3D194DC46A00B1F1A2 /* RequestHandler.m in Sources */,
 				3E7F0B3A194DB5D600B1F1A2 /* OSubManager.m in Sources */,
-				3E7F0C4F194F071C00B1F1A2 /* NSObject+MTKObserving.m in Sources */,
-				3E7F0C4B194F071C00B1F1A2 /* MTKObserver.m in Sources */,
 				3E7F0C0B194E69C900B1F1A2 /* XMLRPCDefaultEncoder.m in Sources */,
 				3E7F0BEE194E69C900B1F1A2 /* NSStringAdditions.m in Sources */,
 				3E7F0C14194E69C900B1F1A2 /* XMLRPCResponse.m in Sources */,
@@ -550,6 +497,7 @@
 				3E75514A194F5EAE00A3AEAF /* SearchSubtitlesHandler.m in Sources */,
 				3E4398B3194DA7E400603C29 /* OpensubtitleAPI.m in Sources */,
 				3E7F0C12194E69C900B1F1A2 /* XMLRPCRequest.m in Sources */,
+				80A666BC1965F91300E563E6 /* DownloadSubtitleHandler.m in Sources */,
 				807E28C91960909D001DF1C0 /* GetSubLanguagesHandler.m in Sources */,
 				3E75514E194F604100A3AEAF /* SearchMoviesOnIMDBHandler.m in Sources */,
 				3E7F0BEC194E69C900B1F1A2 /* NSData+Base64.m in Sources */,

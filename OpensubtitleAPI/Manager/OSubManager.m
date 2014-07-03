@@ -8,10 +8,10 @@
 
 #import "OSubManager.h"
 #import "LoginRequest.h"
-#import "MTKObserving.h"
 #import "SearchMoviesOnIMDBHandler.h"
 #import "SearchSubtitlesHandler.h"
 #import "GetSubLanguagesHandler.h"
+#import "DownloadSubtitleHandler.h"
 
 @interface OSubManager()
 @property (nonatomic, strong) LoginRequest * loginRequest;
@@ -41,18 +41,25 @@
     }
     return self;
 }
+
 -(void) sessionStartOnResponse:(void(^)(BOOL)) onSuccess {
     self.loginRequest = [LoginRequest new];
     
     //Will observe for changes on token
-    [self observeProperty:@keypath(self.loginRequest.token) withBlock:
-     ^(__weak typeof(self) self, NSString *oldToken, NSString *newToken) {
-         self.token = newToken;
-     }];
+    [self.loginRequest addObserver:self forKeyPath:@"token" options:NSKeyValueObservingOptionOld context:nil];
     
     self.loginRequest.onLogin = onSuccess;
     [self.loginRequest makeRequest];
     
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    if ([keyPath isEqualToString:@"token"] && [object isKindOfClass:[LoginRequest class]]) {
+        self.token = ((LoginRequest *) object).token;
+    }
 }
 
 -(void)reloadSessionOnResponse:(void(^)(BOOL)) onSuccess {
@@ -104,23 +111,19 @@
 }
 
 -(void) searchSubtitlesForPathName:(NSString *) pathName {
-    
+    assert(@"Not implemented");
 }
 
 -(void) searchSubtitlesForPathName:(NSString *) pathName forLanguage:(NSDictionary *) language {
-    
+    assert(@"Not implemented");
 }
 
 -(void) searchSubtitlesForString:(NSString *)string forLanguages:(NSArray *) languages{
-    [self searchSubtitlesForString:string forLanguages:languages onQuery:^(BOOL hasResult, NSArray * results) {
-        [self.delegate opensubitleAPI:self subtitleSearchResponseSuccess:hasResult withResults:results];
-    }];
+    [self searchSubtitlesForString:string forLanguages:languages onQuery:^(BOOL hasResult, NSArray * results) {}];
 }
 
 -(void) searchSubtitlesForString:(NSString *)string {
-    [self searchSubtitlesForString:string onQuery:^(BOOL hasResult, NSArray * results) {
-        [self.delegate opensubitleAPI:self subtitleSearchResponseSuccess:hasResult withResults:results];
-    }];
+    [self searchSubtitlesForString:string onQuery:^(BOOL hasResult, NSArray * results) {}];
 }
 
 -(void) searchSubtitlesForString:(NSString *) string onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound {
@@ -150,10 +153,16 @@
             
             
             subtitlesHandler.imdbid = imdbIDs[0];//[imdbIDs componentsJoinedByString:@","];
-            subtitlesHandler.onSubtitlesFound = onSubtitlesFound;
+            subtitlesHandler.onSubtitlesFound = ^(BOOL hasResult, NSArray * results) {
+                (onSubtitlesFound)(hasResult, results);
+                [self.delegate opensubitleAPI:self subtitleSearchResponseSuccess:hasResult withResults:results];
+            };
+            
             [subtitlesHandler makeRequest];
         } else {
             (onSubtitlesFound)(NO, nil);
+            [self.delegate opensubitleAPI:self subtitleSearchResponseSuccess:NO withResults:nil];
+
         }
     };
     
@@ -164,13 +173,54 @@
                 imdbSearch.token = self.token;
                 [imdbSearch makeRequest];
             } else {
-                (onSubtitlesFound)(NO, nil);
+                (imdbSearch.onMoviesFound)(NO, nil);
             }
             
         }];
     } else {
         
         [imdbSearch makeRequest];
+    }
+}
+
+-(void) downloadSubtitleWithId:(NSString *) identifier {
+    [self downloadSubtitleWithId:identifier onDownloadFinish:^(NSData * data) {
+        
+    } onFail:^(int code) {
+        
+    }];
+}
+
+-(void) downloadSubtitleWithId:(NSString *) identifier onDownloadFinish:(void(^)(NSData *)) onFinish onFail:(void(^)(int)) onFail {
+    DownloadSubtitleHandler * downloadSubtitle = [DownloadSubtitleHandler new];
+    
+    downloadSubtitle.token = self.token;
+    downloadSubtitle.subtitleId = identifier;
+    
+    downloadSubtitle.onDownloadSubtitlesSuccessed = ^(NSData * data) {
+        
+        (onFinish)(data);
+        [self.delegate opensubitleAPI:self subtitleDownloadWithData:data];
+    };
+    
+    downloadSubtitle.onDownloadSubtitlesFailed = ^(int code) {
+        (onFail)(code);
+        [self.delegate opensubitleAPI:self subtitleDownloadFailed:code];
+    };
+    
+    
+    if (!self.token) {
+        [self reloadSessionOnResponse:^(BOOL success) {
+            if (success) {
+                downloadSubtitle.token = self.token;
+                [downloadSubtitle makeRequest];
+            } else {
+                (downloadSubtitle.onDownloadSubtitlesFailed)(-1);
+            }
+            
+        }];
+    } else {
+        [downloadSubtitle makeRequest];
     }
 }
 

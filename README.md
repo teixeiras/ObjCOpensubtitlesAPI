@@ -23,6 +23,11 @@ Method called whenever there is a search result.
 
 Method called when there is a request for the existent country codes.
 
+	-(void) opensubitleAPI:(OSubManager *) sessionManager subtitleDownloadWithData:(NSData *) results;
+If the download from subtitle went well
+
+	-(void) opensubitleAPI:(OSubManager *) sessionManager subtitleDownloadFailed:(int) error;
+When the subtitle fails to download
 ####Init the Manager
 OSubManager It's manager. You can do all using this class. 
 
@@ -35,7 +40,12 @@ Example using blocks:
 	[[OSubManager sharedObject] searchSubtitlesForString:@"Orange Machine" onQuery:^(BOOL hasResults, NSArray * results) {
 		if (hasResults) {
 			foreach (Subtitle * subtitle in results) {
-				//Do something with the subtitles
+				[[OSubManager sharedObject] downloadSubtitleWithId: subtitle.IDSubtitleFile onDownloadFinish:^(NSData * data) {
+					//Success
+				} onFinish onFail:^(int code) {
+					//Download Failed
+				} 
+				]
 			}
 		} else {
 			//No subtitle found
@@ -65,6 +75,15 @@ This search will use the imdb to search the id from the movie in imdb database a
 -(void) searchSubtitlesForString:(NSString *) string forLanguages:(NSArray *) languages onQuery:(void(^)(BOOL,NSArray *)) onSubtitlesFound;
 
 
-###TODO:
-1.Support to download directly from API - Almost there :P
+####Download:
+Using the subtitle ID (can be obtained using the search by name), you can download the subtitle.
+This process is heavy and slow since the subtitle will come in gzip and base64. The API returns the subtitle content in raw.
+
+
+#####Using delegates:
+-(void) downloadSubtitleWithId:(NSString *) identifier;
+#####Using blocks
+-(void) downloadSubtitleWithId:(NSString *) identifier onDownloadFinish:(void(^)(NSData *)) onFinish onFail:(void(^)(int)) onFail;
+
+
 
