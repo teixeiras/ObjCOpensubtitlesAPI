@@ -14,9 +14,9 @@
 		3E4398BB194DA7E400603C29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4398AB194DA7E400603C29 /* Foundation.framework */; };
 		3E4398BD194DA7E400603C29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4398BC194DA7E400603C29 /* UIKit.framework */; };
 		3E4398C0194DA7E400603C29 /* libOpensubtitleAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4398A8194DA7E400603C29 /* libOpensubtitleAPI.a */; };
-		3E755149194F5EAE00A3AEAF /* SearchSubtitlesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E755147194F5EAE00A3AEAF /* SearchSubtitlesHandler.h */; };
+		3E755149194F5EAE00A3AEAF /* SearchSubtitlesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E755147194F5EAE00A3AEAF /* SearchSubtitlesHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E75514A194F5EAE00A3AEAF /* SearchSubtitlesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E755148194F5EAE00A3AEAF /* SearchSubtitlesHandler.m */; };
-		3E75514D194F604100A3AEAF /* SearchMoviesOnIMDBHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E75514B194F604100A3AEAF /* SearchMoviesOnIMDBHandler.h */; };
+		3E75514D194F604100A3AEAF /* SearchMoviesOnIMDBHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E75514B194F604100A3AEAF /* SearchMoviesOnIMDBHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E75514E194F604100A3AEAF /* SearchMoviesOnIMDBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75514C194F604100A3AEAF /* SearchMoviesOnIMDBHandler.m */; };
 		3E7F0B3A194DB5D600B1F1A2 /* OSubManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0B39194DB5D600B1F1A2 /* OSubManager.m */; };
 		3E7F0B3D194DC46A00B1F1A2 /* RequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0B3C194DC46A00B1F1A2 /* RequestHandler.m */; };
@@ -50,14 +50,15 @@
 		3E7F0C12194E69C900B1F1A2 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0BE8194E69C900B1F1A2 /* XMLRPCRequest.m */; };
 		3E7F0C13194E69C900B1F1A2 /* XMLRPCResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0BE9194E69C900B1F1A2 /* XMLRPCResponse.h */; };
 		3E7F0C14194E69C900B1F1A2 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0BEA194E69C900B1F1A2 /* XMLRPCResponse.m */; };
-		807E28C419608EF3001DF1C0 /* Subtitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C219608EF3001DF1C0 /* Subtitle.h */; };
+		807E28C419608EF3001DF1C0 /* Subtitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C219608EF3001DF1C0 /* Subtitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		807E28C519608EF3001DF1C0 /* Subtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 807E28C319608EF3001DF1C0 /* Subtitle.m */; };
-		807E28C81960909D001DF1C0 /* GetSubLanguagesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C61960909D001DF1C0 /* GetSubLanguagesHandler.h */; };
+		807E28C81960909D001DF1C0 /* GetSubLanguagesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C61960909D001DF1C0 /* GetSubLanguagesHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		807E28C91960909D001DF1C0 /* GetSubLanguagesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 807E28C71960909D001DF1C0 /* GetSubLanguagesHandler.m */; };
-		80A666BB1965F91300E563E6 /* DownloadSubtitleHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A666B91965F91300E563E6 /* DownloadSubtitleHandler.h */; };
+		80A666BB1965F91300E563E6 /* DownloadSubtitleHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A666B91965F91300E563E6 /* DownloadSubtitleHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80A666BC1965F91300E563E6 /* DownloadSubtitleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A666BA1965F91300E563E6 /* DownloadSubtitleHandler.m */; };
-		80A666BF196604E200E563E6 /* SubtitleFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A666BD196604E200E563E6 /* SubtitleFileManager.h */; };
+		80A666BF196604E200E563E6 /* SubtitleFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A666BD196604E200E563E6 /* SubtitleFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80A666C0196604E200E563E6 /* SubtitleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A666BE196604E200E563E6 /* SubtitleFileManager.m */; };
+		80A666C41966B54900E563E6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A666C31966B54900E563E6 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		80A666BA1965F91300E563E6 /* DownloadSubtitleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadSubtitleHandler.m; sourceTree = "<group>"; };
 		80A666BD196604E200E563E6 /* SubtitleFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitleFileManager.h; sourceTree = "<group>"; };
 		80A666BE196604E200E563E6 /* SubtitleFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleFileManager.m; sourceTree = "<group>"; };
+		80A666C31966B54900E563E6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B53FBE7A1E6F4E57819E0CC3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A666C41966B54900E563E6 /* libz.dylib in Frameworks */,
 				3E4398AC194DA7E400603C29 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +215,7 @@
 		3E4398AA194DA7E400603C29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80A666C31966B54900E563E6 /* libz.dylib */,
 				3E4398AB194DA7E400603C29 /* Foundation.framework */,
 				3E4398B9194DA7E400603C29 /* XCTest.framework */,
 				3E4398BC194DA7E400603C29 /* UIKit.framework */,

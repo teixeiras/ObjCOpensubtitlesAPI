@@ -23,7 +23,7 @@
 		3E7F0B14194DB2C800B1F1A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0AF0194DB2C700B1F1A2 /* UIKit.framework */; };
 		3E7F0B1C194DB2C800B1F1A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F0B1A194DB2C800B1F1A2 /* InfoPlist.strings */; };
 		3E7F0B1E194DB2C800B1F1A2 /* OpensubtitlesTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0B1D194DB2C800B1F1A2 /* OpensubtitlesTesterTests.m */; };
-		3E7F0B28194DB32C00B1F1A2 /* libOpensubtitleAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0B27194DB32C00B1F1A2 /* libOpensubtitleAPI.a */; };
+		80A666C21966B49100E563E6 /* libOpensubtitleAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F0B30194DB3EC00B1F1A2 /* libOpensubtitleAPI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E7F0B28194DB32C00B1F1A2 /* libOpensubtitleAPI.a in Frameworks */,
+				80A666C21966B49100E563E6 /* libOpensubtitleAPI.a in Frameworks */,
 				3E7F0AEF194DB2C700B1F1A2 /* CoreGraphics.framework in Frameworks */,
 				3E7F0AF1194DB2C700B1F1A2 /* UIKit.framework in Frameworks */,
 				3E7F0AED194DB2C700B1F1A2 /* Foundation.framework in Frameworks */,
@@ -477,11 +477,12 @@
 				INFOPLIST_FILE = "OpensubtitlesTester/OpensubtitlesTester-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/teixeiras/Dropbox/PersonalProjects/objective-c/OpensubtitleAPI/build/Debug-iphoneos",
+					"$(CONFIGURATION_BUILD_DIR)/**",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/**";
@@ -500,11 +501,12 @@
 				INFOPLIST_FILE = "OpensubtitlesTester/OpensubtitlesTester-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/teixeiras/Dropbox/PersonalProjects/objective-c/OpensubtitleAPI/build/Debug-iphoneos",
+					"$(CONFIGURATION_BUILD_DIR)/**",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/**";

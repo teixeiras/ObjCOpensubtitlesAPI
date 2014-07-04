@@ -37,20 +37,19 @@ Example using blocks:
 	// 3 letters country code (You can retrieve it from the API) with the subtitles language, you can add several.
 	[[OSubManager sharedObject]	addSearchLanguage:@"por"];
 	
-	[[OSubManager sharedObject] searchSubtitlesForString:@"Orange Machine" onQuery:^(BOOL hasResults, NSArray * results) {
-		if (hasResults) {
-			foreach (Subtitle * subtitle in results) {
-				[[OSubManager sharedObject] downloadSubtitleWithId: subtitle.IDSubtitleFile onDownloadFinish:^(NSData * data) {
-					//Success
-				} onFinish onFail:^(int code) {
-					//Download Failed
-				} 
-				]
-			}
-		} else {
-			//No subtitle found
-		}
-	}];
+	 [[OSubManager sharedObject] searchSubtitlesForString:@"Orange Machine" onQuery:^(BOOL hasResults, NSArray * results) {
+        if (hasResults) {
+            for (Subtitle * subtitle in results) {
+                [[OSubManager sharedObject] downloadSubtitleWithId:subtitle.IDSubtitleFile onDownloadFinish:^(NSData * data) {
+                    
+                } onFail:^(int code) {
+                    
+                }];
+            }
+        } else {
+            //No subtitle found
+        }
+    }];
 
 ####Country Codes
 You can request an NSArray with NSDictionary with country code (2 and 3 letters), localized country name.

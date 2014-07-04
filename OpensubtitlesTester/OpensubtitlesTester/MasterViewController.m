@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import <OpensubtitleAPI/OpensubtitleAPI.h>
+
 @interface MasterViewController () {
     NSMutableArray *_objects;
 }
@@ -35,9 +36,19 @@
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    [[OSubManager sharedObject] searchSubtitlesForString:@"E tudo o vento levou"onQuery:^(BOOL hasResults, NSArray * result) {
+    [[OSubManager sharedObject] addSearchLanguage:@"por"];
+    
+    [[OSubManager sharedObject] searchSubtitlesForString:@"Orange Machine" onQuery:^(BOOL hasResults, NSArray * results) {
         if (hasResults) {
-            //do something with it
+            for (Subtitle * subtitle in results) {
+                [[OSubManager sharedObject] downloadSubtitleWithId:subtitle.IDSubtitleFile onDownloadFinish:^(NSData * data) {
+                    
+                } onFail:^(int code) {
+                    
+                }];
+            }
+        } else {
+            //No subtitle found
         }
     }];
     
