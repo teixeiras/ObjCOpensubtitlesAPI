@@ -136,6 +136,7 @@
     SearchMoviesOnIMDBHandler * imdbSearch = [SearchMoviesOnIMDBHandler new];
     
     imdbSearch.query = string;
+    imdbSearch.token = self.token;
     imdbSearch.onMoviesFound=^(BOOL hasResults, NSArray * results) {
         if (hasResults) {
             

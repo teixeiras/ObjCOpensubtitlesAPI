@@ -41,7 +41,12 @@
                 //base64-encoded and gzipped subtitle file contents
                 NSString * data = file[@"data"];
                 NSData * binaryData = [SubtitleFileManager base64DataFromString:data];
-                NSData * unCompressedData = [SubtitleFileManager gunzippedData:binaryData];
+                NSString *strData = [[NSString alloc]initWithData:binaryData encoding:NSUTF8StringEncoding];
+                NSLog(@"%@", strData);
+                
+                NSData * unCompressedData = [SubtitleFileManager gunzippedData:unCompressedData];
+                strData = [[NSString alloc]initWithData:binaryData encoding:NSUTF8StringEncoding];
+                NSLog(@"%@", strData);
                 (self.onDownloadSubtitlesSuccessed)(unCompressedData);
                 return;
             }
