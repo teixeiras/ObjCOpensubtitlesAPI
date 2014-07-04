@@ -44,7 +44,7 @@
                 NSString *strData = [[NSString alloc]initWithData:binaryData encoding:NSUTF8StringEncoding];
                 NSLog(@"%@", strData);
                 
-                NSData * unCompressedData = [SubtitleFileManager gunzippedData:unCompressedData];
+                NSData * unCompressedData = [SubtitleFileManager gunzippedData:binaryData];
                 strData = [[NSString alloc]initWithData:binaryData encoding:NSUTF8StringEncoding];
                 NSLog(@"%@", strData);
                 (self.onDownloadSubtitlesSuccessed)(unCompressedData);
