@@ -14,5 +14,4 @@
 @property (copy) void(^onDownloadSubtitlesFailed)(int);
 
 @property NSString * subtitleId;
-@property NSString * token;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "GetSubLanguagesHandler.h"
-
+#import "Languages.h"
 @implementation GetSubLanguagesHandler
 
 -(NSArray *) parameters {
@@ -35,7 +35,16 @@
         NSLog(@"Parsed response: %@", [response object]);
         if ([responseDic isKindOfClass:[NSDictionary class]]) {
             if (responseDic[@"data"]) {
-                self.onLanguageRetrieve(YES, responseDic[@"data"]);
+                NSMutableArray * array = [NSMutableArray new];
+                for (NSDictionary * dic in responseDic[@"data"]) {
+                    Languages * lang = [Languages new];
+                    lang.ISO639 = dic[@"ISO639"];
+                    lang.LanguageName = dic[@"LanguageName"];
+                    lang.SubLanguageID = dic[@"SubLanguageID"];
+                    [array addObject:lang];
+                }
+
+                self.onLanguageRetrieve(YES, array);
                 return;
             }
             

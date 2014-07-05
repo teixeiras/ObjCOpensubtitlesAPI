@@ -12,5 +12,4 @@
 
 @property (copy) void(^onLogin)(BOOL);
 
-@property (nonatomic, strong) NSString * token;
 @end

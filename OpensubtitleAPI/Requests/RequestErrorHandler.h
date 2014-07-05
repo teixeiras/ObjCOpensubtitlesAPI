@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface RequestErrorHandler : NSObject
++(instancetype) sharedInstance;
+-(BOOL) hasErrorOccurredWithMessage:(NSString *) message onMessageFind:(void(^)(BOOL, NSNumber *, NSString *)) event ;
 
 @end

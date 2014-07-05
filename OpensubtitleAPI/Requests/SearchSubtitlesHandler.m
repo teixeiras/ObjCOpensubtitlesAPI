@@ -49,21 +49,28 @@
         NSLog(@"Fault code: %@", [response faultCode]);
         
         NSLog(@"Fault string: %@", [response faultString]);
+        
+        (self.onSubtitlesFound)(NO, nil);
     } else {
         NSDictionary * responseDic = [response object];
-        NSLog(@"Parsed response: %@", [response object]);
-        if ([responseDic isKindOfClass:[NSDictionary class]]) {
-            NSMutableArray * subtitles = [NSMutableArray new];
-            for (NSDictionary * dic in responseDic[@"data"]) {
-                Subtitle * sub = [Subtitle new];
-                [sub populateWithNSDictionary:dic];
-                [subtitles addObject:sub];
+        [self reloadTokenIfNecessaryForRequest:responseDic onfinish:^{
+
+            NSLog(@"Parsed response: %@", [response object]);
+            if ([responseDic isKindOfClass:[NSDictionary class]]) {
+                NSMutableArray * subtitles = [NSMutableArray new];
+                for (NSDictionary * dic in responseDic[@"data"]) {
+                    Subtitle * sub = [Subtitle new];
+                    [sub populateWithNSDictionary:dic];
+                    [subtitles addObject:sub];
+                }
+                (self.onSubtitlesFound)(YES, subtitles);
+                return;
+            } else {
+                NSLog(@"Object parsed is not an nsdictionary");
             }
-            (self.onSubtitlesFound)(YES, subtitles);
-        } else {
-            NSLog(@"Object parsed is not an nsdictionary");
-        }
+            (self.onSubtitlesFound)(NO, nil);
+        }];
+        
     }
-    (self.onSubtitlesFound)(NO, nil);
 }
 @end

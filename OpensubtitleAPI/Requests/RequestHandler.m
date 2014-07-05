@@ -10,6 +10,8 @@
 #import "XMLRPCRequest.h"
 #import "XMLRPCResponse.h"
 #import "XMLRPCConnectionManager.h"
+#import "RequestErrorHandler.h"
+#import "OSubManager.h"
 
 @interface RequestHandler()<XMLRPCConnectionDelegate>
 @end
@@ -66,5 +68,26 @@
     }
     
     NSLog(@"Response body: %@", [response body]);
+}
+
+
+-(BOOL) reloadTokenIfNecessaryForRequest:(NSDictionary *)responseDic onfinish:(void(^)()) renewCallback{
+    if ([[RequestErrorHandler sharedInstance] hasErrorOccurredWithMessage:responseDic[@"status"] onMessageFind:^(BOOL failed, NSNumber * errorCode, NSString * messsage) {
+        if (failed) {
+            if ([errorCode isEqualToNumber:@(401)]) {
+                [[OSubManager sharedObject] reloadSessionOnResponse:^(BOOL success) {
+                    if (success) {
+                        self.token = [OSubManager sharedObject].token;
+                        [self makeRequest];
+                        return;
+                    }
+                }];
+            }
+        }
+    }]) {
+        return YES;
+    }
+    (renewCallback)();
+    return NO;
 }
 @end

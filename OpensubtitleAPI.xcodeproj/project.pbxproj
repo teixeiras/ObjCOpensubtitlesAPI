@@ -50,6 +50,8 @@
 		3E7F0C12194E69C900B1F1A2 /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0BE8194E69C900B1F1A2 /* XMLRPCRequest.m */; };
 		3E7F0C13194E69C900B1F1A2 /* XMLRPCResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7F0BE9194E69C900B1F1A2 /* XMLRPCResponse.h */; };
 		3E7F0C14194E69C900B1F1A2 /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F0BEA194E69C900B1F1A2 /* XMLRPCResponse.m */; };
+		8064A4771968A6A60029467C /* Languages.h in Headers */ = {isa = PBXBuildFile; fileRef = 8064A4751968A6A60029467C /* Languages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8064A4781968A6A60029467C /* Languages.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A4761968A6A60029467C /* Languages.m */; };
 		807E28C419608EF3001DF1C0 /* Subtitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C219608EF3001DF1C0 /* Subtitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		807E28C519608EF3001DF1C0 /* Subtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 807E28C319608EF3001DF1C0 /* Subtitle.m */; };
 		807E28C81960909D001DF1C0 /* GetSubLanguagesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 807E28C61960909D001DF1C0 /* GetSubLanguagesHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,6 +154,8 @@
 		3E7F0BE8194E69C900B1F1A2 /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
 		3E7F0BE9194E69C900B1F1A2 /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
 		3E7F0BEA194E69C900B1F1A2 /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		8064A4751968A6A60029467C /* Languages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Languages.h; sourceTree = "<group>"; };
+		8064A4761968A6A60029467C /* Languages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Languages.m; sourceTree = "<group>"; };
 		807E28C219608EF3001DF1C0 /* Subtitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subtitle.h; sourceTree = "<group>"; };
 		807E28C319608EF3001DF1C0 /* Subtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Subtitle.m; sourceTree = "<group>"; };
 		807E28C61960909D001DF1C0 /* GetSubLanguagesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetSubLanguagesHandler.h; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 			children = (
 				807E28C219608EF3001DF1C0 /* Subtitle.h */,
 				807E28C319608EF3001DF1C0 /* Subtitle.m */,
+				8064A4751968A6A60029467C /* Languages.h */,
+				8064A4761968A6A60029467C /* Languages.m */,
 			);
 			name = DTO;
 			path = OpensubtitleAPI/DTO;
@@ -392,6 +398,7 @@
 				3E7F0B67194E651900B1F1A2 /* OSubManager.h in Headers */,
 				3E7F0C08194E69C900B1F1A2 /* XMLRPCConnectionManager.h in Headers */,
 				3E7F0C05194E69C900B1F1A2 /* XMLRPCConnection.h in Headers */,
+				8064A4771968A6A60029467C /* Languages.h in Headers */,
 				3E7F0C0D194E69C900B1F1A2 /* XMLRPCEventBasedParser.h in Headers */,
 				3E7F0B68194E653300B1F1A2 /* RequestHandler.h in Headers */,
 				3E755149194F5EAE00A3AEAF /* SearchSubtitlesHandler.h in Headers */,
@@ -509,6 +516,7 @@
 				3E75514A194F5EAE00A3AEAF /* SearchSubtitlesHandler.m in Sources */,
 				3E4398B3194DA7E400603C29 /* OpensubtitleAPI.m in Sources */,
 				3E7F0C12194E69C900B1F1A2 /* XMLRPCRequest.m in Sources */,
+				8064A4781968A6A60029467C /* Languages.m in Sources */,
 				80A666BC1965F91300E563E6 /* DownloadSubtitleHandler.m in Sources */,
 				807E28C91960909D001DF1C0 /* GetSubLanguagesHandler.m in Sources */,
 				3E75514E194F604100A3AEAF /* SearchMoviesOnIMDBHandler.m in Sources */,

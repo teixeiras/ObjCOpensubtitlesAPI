@@ -35,22 +35,29 @@
         NSLog(@"Fault string: %@", [response faultString]);
     } else {
         NSDictionary * responseDic = [response object];
-        NSLog(@"Parsed response: %@", [response object]);
-        if ([responseDic isKindOfClass:[NSDictionary class]]) {
-            for (NSDictionary * file in responseDic[@"data"]) {
-                //base64-encoded and gzipped subtitle file contents
-                NSString * data = file[@"data"];
-                NSData * binaryData = [SubtitleFileManager base64DataFromString:data];
-                NSData * unCompressedData = [SubtitleFileManager gunzippedData:binaryData];
-                NSString * strData = [[NSString alloc]initWithData:unCompressedData encoding: NSASCIIStringEncoding];
-                NSLog(@"Data Received: %@", strData);
-                (self.onDownloadSubtitlesSuccessed)(unCompressedData);
-                return;
+        [self reloadTokenIfNecessaryForRequest:responseDic onfinish:^{
+
+            NSLog(@"Parsed response: %@", [response object]);
+            if ([responseDic isKindOfClass:[NSDictionary class]]) {
+                for (NSDictionary * file in responseDic[@"data"]) {
+                    //base64-encoded and gzipped subtitle file contents
+                    NSString * data = file[@"data"];
+                    NSData * binaryData = [SubtitleFileManager base64DataFromString:data];
+                    NSData * unCompressedData = [SubtitleFileManager gunzippedData:binaryData];
+                    NSString * strData = [[NSString alloc]initWithData:unCompressedData encoding: NSASCIIStringEncoding];
+                    NSLog(@"Data Received: %@", strData);
+                    if (strData.length == 0) {
+                        (self.onDownloadSubtitlesFailed)(-1);
+                        return;
+                    }
+                    (self.onDownloadSubtitlesSuccessed)(unCompressedData);
+                    return;
+                }
+            } else {
+                NSLog(@"Object parsed is not an nsdictionary");
             }
-        } else {
-            NSLog(@"Object parsed is not an nsdictionary");
-        }
-        (self.onDownloadSubtitlesFailed)(-1);
+            (self.onDownloadSubtitlesFailed)(-1);
+        }];
     }
 }
 @end

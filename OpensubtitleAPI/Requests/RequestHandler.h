@@ -12,11 +12,14 @@
 #import "XMLRPCConnectionManager.h"
 
 @interface RequestHandler : NSObject
-
+@property (nonatomic, strong) NSString * token;
 
 -(NSURL *) url;
 -(NSArray *) parameters;
 -(NSString *) method;
+
 -(void) makeRequest;
 -(void)request: (XMLRPCRequest *)request didReceiveResponse: (XMLRPCResponse *)response;
+-(BOOL) reloadTokenIfNecessaryForRequest:(NSDictionary *)responseDic onfinish:(void(^)()) renewCallback;
+
 @end

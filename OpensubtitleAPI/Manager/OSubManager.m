@@ -16,7 +16,6 @@
 @interface OSubManager()
 @property (nonatomic, strong) LoginRequest * loginRequest;
 
-@property (nonatomic, strong) NSString * token;
 
 @property (nonatomic, strong) NSMutableArray * languages;
 @end

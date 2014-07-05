@@ -12,6 +12,5 @@
 
 @property (copy) void(^onMoviesFound)(BOOL,NSArray *);
 
-@property NSString * token;
 @property NSString * query;
 @end

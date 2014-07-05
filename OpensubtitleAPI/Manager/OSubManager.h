@@ -24,6 +24,8 @@
 
 @interface OSubManager : NSObject
 
+@property (nonatomic, strong) NSString * token;
+
 @property BOOL useHash;
 
 @property id<OSubManagerDelegate> delegate;

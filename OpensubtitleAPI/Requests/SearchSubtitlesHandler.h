@@ -12,7 +12,6 @@
 
 @property (copy) void(^onSubtitlesFound)(BOOL,NSArray *);
 
-@property NSString * token;
 @property NSString * sublanguageid;
 
 @property NSArray * hashList;

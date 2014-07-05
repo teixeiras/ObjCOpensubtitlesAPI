@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Subtitle.h"
 #import "OSubManager.h"
+#import "Languages.h"
 
 @interface OpensubtitleAPI : NSObject
 @end

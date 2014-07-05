@@ -7,7 +7,8 @@
 //
 
 #import "SearchMoviesOnIMDBHandler.h"
-
+#import "RequestErrorHandler.h"
+#import "OSubManager.h"
 @implementation SearchMoviesOnIMDBHandler
 
 -(NSArray *) parameters {
@@ -30,21 +31,26 @@
         NSLog(@"Fault code: %@", [response faultCode]);
         
         NSLog(@"Fault string: %@", [response faultString]);
+        
+        self.onMoviesFound(NO,nil);
     } else {
         
         NSDictionary * responseDic = [response object];
-        NSLog(@"Parsed response: %@", [response object]);
-        
-        if ([responseDic isKindOfClass:[NSDictionary class]]) {
-            NSArray * data = responseDic[@"data"];
-            if (data.count) {
-                self.onMoviesFound(YES,data);
-            }
+        [self reloadTokenIfNecessaryForRequest:responseDic onfinish:^{
+            NSLog(@"Parsed response: %@", [response object]);
+            
+            if ([responseDic isKindOfClass:[NSDictionary class]]) {
+                NSArray * data = responseDic[@"data"];
+                if (data.count) {
+                    self.onMoviesFound(YES,data);
+                    return;
+                }
 
-        } else {
-            NSLog(@"Object parsed is not an nsdictionary");
-        }
+            } else {
+                NSLog(@"Object parsed is not an nsdictionary");
+            }
+            self.onMoviesFound(NO,nil);
+        }];
     }
-    self.onMoviesFound(NO,nil);
 }
 @end

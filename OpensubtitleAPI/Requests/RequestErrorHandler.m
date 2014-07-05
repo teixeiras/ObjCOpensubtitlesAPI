@@ -9,7 +9,7 @@
 #import "RequestErrorHandler.h"
 
 @implementation RequestErrorHandler
--(instancetype) sharedInstance {
++(instancetype) sharedInstance {
     static id instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -51,7 +51,7 @@
     __block BOOL error = NO;
     [[self errorMatrix] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         
-        if ([obj isEqualToString:message]) {
+        if ([[key stringValue] isEqualToString:[message substringWithRange:NSMakeRange(0, [key stringValue].length)]]) {
             
             if ([key isEqualToNumber:@200] || [key isEqualToNumber:@206]) {
                 (event)(NO, key, obj);
